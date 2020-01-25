@@ -12,7 +12,7 @@ contentCopyright: MIT
 mathjax: true
 autoCollapseToc: true
 ---
-# ~/.bashrc配置
+## ~/.bashrc配置
 ```
 export PATH=$PATH:$HOME/.pyenv/bin
 eval "$(pyenv init -)"
@@ -37,7 +37,7 @@ export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/"
 export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin 
 ```
 
-# hadoop
+## hadoop
 ### $HADOOP_HOME/etc/hadoop/slaves
 ```
 Slave1
@@ -133,7 +133,7 @@ Slave2
 </configuration>
 ```
 
-# spark
+## spark
 ### $SPARK_HOME/conf/spark-env.sh
 ```
 export JAVA_HOME=/home/liuquan/tools/jdk1.8.0_151
@@ -148,7 +148,7 @@ export SPARK_HOME=/home/liuquan/tools/spark-2.2.0-bin-hadoop2.7
 export SPARK_DIST_CLASSPATH=$(/home/liuquan/tools/hadoop-2.7.4/bin/hadoop classpath)
 ```
 
-# 启动和关闭
+## 启动和关闭
 
 ```
 ./bin/spark-submit --class org.apache.spark.examples.SparkPi  --master spark://Master:6066  --deploy-mode cluster  --supervise --executor-memory 1G  --total-executor-cores 10 /usr/spark/examples/jars/spark-examples_2.11-2.1.0.jar 100000
@@ -171,7 +171,7 @@ vim /etc/hosts
 然后依次ping master,ping slave1
 ```
 
-# hdfs
+## hdfs
 ### 创建用户目录
 - ./bin/hdfs dfs -mkdir -p /user/hadoop
 ### 相对路径
@@ -182,7 +182,7 @@ vim /etc/hosts
 ### zookeepercha看启动过程
 - zkServer.sh start-foreground
 
-# mesos
+## mesos
 ```
 mkdir /opt/mesos-master
 #启动master

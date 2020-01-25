@@ -12,7 +12,7 @@ contentCopyright: MIT
 mathjax: true
 autoCollapseToc: true
 ---
-# 2016.7.19
+## 2016.7.19
 - 比较MVC框架的性能
   - SpringMvc使用简单，学习成本低；灵活；性能高。
   
@@ -41,7 +41,7 @@ autoCollapseToc: true
   - HandlerExceptionResolver接口 异常处理
     - SimpleMappingExceptionResolver实现类
     
-# 2016.7.20
+## 2016.7.20
 
 - DispatcherServlet是前置控制器，配置在web.xml文件中。
 

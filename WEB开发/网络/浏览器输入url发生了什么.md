@@ -12,7 +12,7 @@ contentCopyright: MIT
 mathjax: true
 autoCollapseToc: true
 ---
-# [基本知识点]
+## [基本知识点]
 ### 1、总体而言
 - DNS解析
 - TCP连接
@@ -89,4 +89,4 @@ autoCollapseToc: true
 - 考虑缩短连接时间，即DNS优化部分
 - 减少响应内容大小，即对内容进行压缩
 
-# [高级讲解](http://fex.baidu.com/blog/2014/05/what-happen/)
+## [高级讲解](http://fex.baidu.com/blog/2014/05/what-happen/)

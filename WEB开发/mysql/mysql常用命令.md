@@ -20,3 +20,15 @@ autoCollapseToc: true
 - 查看字符集设置
   - show variables like 'collation_%'; 
   - show variables like 'character_set_%';
+  
+### 彻底卸载mysql
+```
+sudo apt-get autoremove --purge mysql-server-5.7 
+Y
+sudo apt-get remove mysql-common
+sudo rm -rf /etc/mysql/  /var/lib/mysql    #很重要
+#清理残留数据
+dpkg -l |grep ^rc|awk '{print $2}' |sudo xargs dpkg -P  
+sudo apt autoremove
+sudo apt autoreclean
+```

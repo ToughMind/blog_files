@@ -12,7 +12,7 @@ contentCopyright: MIT
 mathjax: true
 autoCollapseToc: true
 ---
-# 配置文件
+### 配置文件
 ```
 {
   "server":"0.0.0.0",
@@ -45,7 +45,7 @@ autoCollapseToc: true
 
 ```
 
-# 启动
+### 启动
 - /etc/init.d/shadowsocks restart
 - ssserver -c /etc/shadowsocks.json -d start
 

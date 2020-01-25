@@ -12,13 +12,13 @@ contentCopyright: MIT
 mathjax: true
 autoCollapseToc: true
 ---
-# 2016.7.18
+## 2016.7.18
 - 为什么要使用mybatis类似的框架呢？
   - 在传统的jdbc代码时，需要编写DAO层代码将数据库表中的数据封装到自定义的实体bean中。而mybatis和hibernate类似的框架则已经封装好了。
   
 - mybatis是个持久层框架，是一种半自动化的ORM映射框架。核心是SqlSessionFactory对象，由SqlSessionFactoryBuilder类创建。
 
-# 2016.8.3
+## 2016.8.3
 - SqlSessionFactoryBuilder创建了SqlSessionFactory后就不需要存在了，也就是不需要保持此对象的状态。SqlSessionFactory对象应在应用程序执行期间都存在，最佳方式就是写单例。而SqlSession每个线程都应该有自己的实例，决不能将SqlSession实例对象放在静态变量、实例字段即任何类型的管理范围中。
 
 - 处理null值时可以用jdbcType指定方式，也可以用<if>标签进行判断。

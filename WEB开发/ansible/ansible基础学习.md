@@ -13,6 +13,13 @@ mathjax: true
 autoCollapseToc: true
 ---
 
+## 安装ansible
+```
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt-get update
+sudo apt-get install ansible
+```
+
 ## 基本连接命令
 ```
 ansible -i ./hosts --connection=local local -m ping

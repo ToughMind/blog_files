@@ -12,9 +12,9 @@ contentCopyright: MIT
 mathjax: true
 autoCollapseToc: true
 ---
-# 基础语法
+## 基础语法
 
-### `GRANT priv_type ON database.table TO user[IDENTIFIED BY [PASSWORD] 'password'] [,user [IDENTIFIED BY [PASSWORD] 'password']...]`
+- `GRANT priv_type ON database.table TO user[IDENTIFIED BY [PASSWORD] 'password'] [,user [IDENTIFIED BY [PASSWORD] 'password']...]`
   
   - priv_type代表允许操作的权限。
   
@@ -37,7 +37,7 @@ autoCollapseToc: true
   - `GRANT UPDATE(name,age) ON mydb.stu TO 'test'@'1.1.1.1' IDENTIFIED BY 'pwd';`
  
 
-# Mysql权限层级相关表
+## Mysql权限层级相关表
   
 ### user表：全局层级
 - 存储用户记录的表。关键字段有Host、User、Password。
@@ -72,11 +72,11 @@ autoCollapseToc: true
 ### procs_priv表：子程序层级
 - 可以对存储过程和存储函数进行权限设置。关键字段Host、User、proc_priv
 
-# 用户相关操作
+## 用户相关操作
 
-## 创建用户
+### 创建用户
 
-### CREATE USER方式
+> CREATE USER方式
 
 - 必须要拥有CREATE USER权限。
 
@@ -84,13 +84,13 @@ autoCollapseToc: true
 [user[IDENTIFIED BY [PASSWORD] 'password']]...`
   - `CREATE USER 'name'@'%' IDENTIFIED BY 'pwd';`
   
-### INSERT方式
+> INSERT方式
 
 - 必须拥有mysql.user表的INSERT权限。另外，ssl_cipher、x509_issuer、x509_subject等必须要设置值
 
 - `INSERT INTO mysql.user(Host,User,Password,ssl_cipher,x509_issuer,x509_subject) VALUES('%','name',PASSWORD('pwd'),'','','') `
 
-### GRANT方式
+> GRANT方式
 
 - 需要拥有GRANT权限。
 
@@ -99,9 +99,9 @@ TO user[IDENTIFIED BY [PASSWORD] 'password']
 [,user [IDENTIFIED BY [PASSWORD] 'password']...]`
   - `GRANT ALL ON mydb.*  TO name@'1.1.1.1' IDENTIFIED BY 'pwd';`
   
-## 删除用户
+### 删除用户
 
-### DROP USER方式
+> DROP USER方式
 
 - 需要拥有DROP USER权限。 
 
@@ -109,27 +109,27 @@ TO user[IDENTIFIED BY [PASSWORD] 'password']
   - user是需要删除的用户，由用户名(User)和主机名(Host)构成。  
   - eg：`DROP USER name@'1.1.1.1'`
   
-### DELETE方式
+> DELETE方式
 
 - `DELETE FROM mydb.user WHERE Host = '% AND User = 'admin';`
 
-## 修改用户
+### 修改用户
 
-### 修改用户名称
+> 修改用户名称
 
 - `RENAME USER name TO newname`
 
 ### 修改用户密码
 
-### mysqladmin方式
+> mysqladmin方式
 
 - `mysqladmin -u username -p password "new_password";`
 
-### 修改user表
+> 修改user表
 
 - `UPDATE user SET Password = PASSWORD('pwd') WHERE USER = 'name';`
 
-### SET语句方式
+> SET语句方式
 
 - 修改自己用户
   - `SET PASSWORD = PASSWORD("pwd");`
@@ -137,7 +137,7 @@ TO user[IDENTIFIED BY [PASSWORD] 'password']
 - 修改其他用户
   - `SET PASSWORD FOR 'name'@'%'=PASSWORD("pwd")`
   
-### GRANT方式
+> GRANT方式
 
 - `GRANT SELECT ON *.* TO 'name'@'%' IDENTIFIED BY 'pwd'`
 

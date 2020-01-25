@@ -13,9 +13,9 @@ mathjax: true
 autoCollapseToc: true
 ---
 
-# gem
+## gem
 > ruby下的gem，nodejs下的npm
-## 常用
+
 命令 | 说明
 ---|---
 gem sources -l | 查看gem源地址
@@ -23,8 +23,7 @@ gem sources --remove https://rubygems.org/ | 移除默认源
 gem sources -a https://gems.ruby-china.org/  |添加ruby-china的源
 
 
-# nginx
-## 常用
+## nginx
 
 命令 | 说明
 ---|---
@@ -39,7 +38,7 @@ pkill -9 nginx | 强制停止Nginx
 nginx -c /path/to/nginx.conf | 启动nginx
 kill -HUP 主进程号 | 平滑重启nginx
 
-## 配置
+### 配置
 项目 | 说明
 ---|---
 目录 | /usr/local/etc/nginx/

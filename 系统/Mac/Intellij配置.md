@@ -1,5 +1,5 @@
 ---
-title: "Intellij配置"
+title: "intellij配置"
 date: 2020-01-17T11:51:28+08:00
 description: ""
 lastmod: 2018-07-10T00:00:00+08:00
@@ -20,11 +20,11 @@ autoCollapseToc: true
 /Users/你的用户名/Library/Caches/IntelliJIdeaXXXXXX | 用于保存缓存、日志、以及本地的版本控制信息（local history 这个功能）
 /Users/你的用户名/Library/Preferences/IntelliJIdeaXXXXXX | 用于保存你的个人配置，等价于 Windows 下的 config 目录
 
-# 模板相关
+## 模板相关
 
-## Code Templates
+### Code Templates
 
-### File Header
+> File Header
 ```
 /** @(#)${NAME}.JAVA, ${YEAR}年${MONTH}月${DAY}日.
  * 
@@ -33,7 +33,7 @@ autoCollapseToc: true
  */
 ```
 
-### Files
+> Files
 ```
 /**
  * ${DESC}
@@ -42,7 +42,7 @@ autoCollapseToc: true
  */
 ``` 
 
-### Live Templates
+> Live Templates
 
 - at，作者信息，主要作用备注里
   - date("yyyy年MM月dd日 HH:mm")
@@ -76,7 +76,7 @@ if (logger.isDebugEnabled()) {
 }
 ```
  
-# 实用插件
+## 实用插件
 
 - Eclipse Code Formatter
 
